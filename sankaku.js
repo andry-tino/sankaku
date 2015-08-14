@@ -27,9 +27,17 @@ console.log('Reading file ' + filePath + '...');
 
 var content = null;
 try {
-  content = fs.readFileSync(filePath); 
+  content = fs.readFileSync(filePath, {encoding: 'utf8'}); 
 } catch(e) {
   throw 'Error loading file!';
 }
 console.log('File read successfully!');
+
+// Processing
+console.log('Initializing..');
+main.initialize(content);
+
+console.log('Retrieving AST...');
+main.retrieveAst();
+console.log('AST successfully retrieved! AST has ' + main.stats() + 'objects!');
 
