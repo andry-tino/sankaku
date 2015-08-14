@@ -34,10 +34,12 @@ try {
 console.log('File read successfully!');
 
 // Processing
+var m = main();
+
 console.log('Initializing..');
-main.initialize(content);
+m.initialize(content);
 
 console.log('Retrieving AST...');
-main.retrieveAst();
-console.log('AST successfully retrieved! AST has ' + main.stats() + 'objects!');
+m.retrieveAst();
+console.log('AST successfully retrieved! AST has ' + m.stats() + 'objects!');
 
