@@ -19,3 +19,7 @@ The conversion process consists of a few steps:
 ## Compatibility
 Project _sankaku_ includes everithing it needs. The only single external dependency is on _Node_ whose minimal supported version is: 0.10.36.
 
+Project _sankaku_ is available on the following platforms:
+
+- Unix/Linux (tested on RHEL)
+
