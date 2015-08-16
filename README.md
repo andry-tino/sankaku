@@ -1,4 +1,6 @@
 # sankaku - 3kaku - 三角
+![sankaku](./sankaku.png "sankaku") 
+
 ScriptSharp to TypeScript via JavaScript
 
 ## The project
