@@ -1,4 +1,4 @@
-# sankaku - 三角
+# sankaku - 3kaku - 三角
 ScriptSharp to TypeScript via JavaScript
 
 ## The project
