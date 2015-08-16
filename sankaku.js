@@ -23,23 +23,13 @@ var filePath = program.args[program.args.length - 1];
 if (!filePath) {
   throw 'Error: invalid path!';
 }
-console.log('Reading file ' + filePath + '...');
-
-var content = null;
-try {
-  content = fs.readFileSync(filePath, {encoding: 'utf8'}); 
-} catch(e) {
-  throw 'Error loading file!';
-}
-console.log('File read successfully!');
 
 // Processing
 var m = main();
 
-console.log('Initializing..');
+console.log('Initializing from file ' + filePath + '...');
 m.initialize(content);
 
 console.log('Retrieving AST...');
 m.retrieveAst();
 console.log('AST successfully retrieved! AST has ' + m.stats() + 'objects!');
-
