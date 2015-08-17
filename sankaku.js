@@ -19,16 +19,16 @@ program
   .parse(process.argv);
 
 // Validating arguments
-var filePath = program.args[program.args.length - 1];
-if (!filePath) {
+var filepath = program.args[program.args.length - 1];
+if (!filepath) {
   throw 'Error: invalid path!';
 }
 
 // Processing
 var m = main();
 
-console.log('Initializing from file ' + filePath + '...');
-m.initialize(content);
+console.log('Initializing from file ' + filepath + '...');
+m.initialize(filepath);
 
 console.log('Retrieving AST...');
 m.retrieveAst();
