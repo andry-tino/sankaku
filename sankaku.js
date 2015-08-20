@@ -32,4 +32,4 @@ m.initialize(filepath);
 
 console.log('Retrieving AST...');
 m.retrieveAst();
-console.log('AST successfully retrieved! AST has ' + m.stats() + 'objects!');
+console.log('AST successfully retrieved! AST stats: ' + JSON.stringify(m.stats()));
