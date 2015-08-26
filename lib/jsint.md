@@ -21,7 +21,7 @@ Interfaces used mostly in `regex.js`.
 ### Interface `RegexHandler`
 Describes an object providing all necessary API for handling a specific regex.
 
-    interface RegexHandler = function(matches: *string) -> object
+    interface RegexHandler = function(matches: *string | null) -> object
 
 Where:
 
