@@ -4,13 +4,15 @@
 Describes an object capable of browsing a source code.
 
     interface SourceBrowser = {
-      // Extracts a piece of code.
-      // rs: Row start.
-      // re: Row end.
-      // cs: Column start.
-      // ce: Column end.
       at: function(rs, re, cs, ce) -> string;
     }
+
+Where:
+
+1. `rs`: Row start.
+2. `re`: Row end.
+3. `cs`: Column start.
+4. `ce`: Column end.
 
 ## Regex handling
 Interfaces used mostly in `regex.js`.
