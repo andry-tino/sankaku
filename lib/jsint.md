@@ -26,7 +26,7 @@ Describes an object providing all necessary API for handling a specific regex.
 Where:
 
 1. `matches`: The result of invoking `[object].exec([string])` using a regex and a string to match.
-2. `return`: Returns an object indexing every useful capturing group like: `{ group1: '...', group2: '...', ... }`. `null` will be returned in case `matches` is `null` too.
+2. `return`: Returns an object indexing every useful capturing group; with the peculiarity that property `ALL` will always be available providing the whole match (`[object].exec([string])[0]`). Such object looks like: `{ ALL: '...', group1: '...', group2: '...', ... }`. Also be aware that `null` will be returned in case `matches` is `null` too.
 
 ### Interface `RegexUnit`
 Describes an object providing all necessary API to give information for a specific regex and routines to handle that regex.
