@@ -21,12 +21,12 @@ Interfaces used mostly in `regex.js`.
 ### Interface `RegexHandler`
 Describes an object providing all necessary API for handling a specific regex.
 
-    interface RegexHandler = function(matches: *string | null) -> object
+    interface RegexHandler = function(matches: *string | null) -> object | null
 
 Where:
 
 1. `matches`: The result of invoking `[object].exec([string])` using a regex and a string to match.
-2. `return`: Returns an object indexing every useful capturing group like: `{ group1: '...', group2: '...', ... }`.
+2. `return`: Returns an object indexing every useful capturing group like: `{ group1: '...', group2: '...', ... }`. `null` will be returned in case `matches` is `null` too.
 
 ### Interface `RegexUnit`
 Describes an object providing all necessary API to give information for a specific regex and routines to handle that regex.
