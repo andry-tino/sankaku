@@ -1,5 +1,15 @@
 # Describing interfaces in directory
 
+## Interface `Initializable`
+Describes an object that needs initialization.
+
+    interface Initializable = {
+      initialize: function(...) -> void;
+    }
+
+**Member `initialize`** is a function initializing the object. It returns nothing and can have multiple arguments.
+
+
 ## Interface `SourceBrowser`
 Describes an object capable of browsing a source code.
 
