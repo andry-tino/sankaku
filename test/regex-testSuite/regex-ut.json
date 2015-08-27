@@ -1,51 +1,51 @@
 {
-	"description": "Test data for regex-ut.",
-	
-	"classStatements": [
-		{
-			"source": "namespace.classname.registerClass('namespace.className', namespace.baseclass);",
-			"expected": {
-				"ALL": "namespace.classname.registerClass('namespace.className', namespace.baseclass);",
-				"CLASS_NAME1": "namespace.classname",
-				"CLASS_NAME2": "namespace.classname",
-				"BASE_CLASS_NAME": "namespace.baseclass",
-				"INTERFACE_NAME1": null,
-				"INTERFACE_NAME2": null,
-				"INTERFACE_NAME3": null,
-				"INTERFACE_NAME4": null,
-				"INTERFACE_NAME5": null,
-				"INTERFACE_NAME6": null
+  "description": "Test data for regex-ut.",
+  
+  "classStatements": [
+    {
+      "source": "namespace.classname.registerClass('namespace.className', namespace.baseclass);",
+      "expected": {
+        "ALL": "namespace.classname.registerClass('namespace.className', namespace.baseclass);",
+        "CLASS_NAME1": "namespace.classname",
+        "CLASS_NAME2": "namespace.classname",
+        "BASE_CLASS_NAME": "namespace.baseclass",
+        "INTERFACE_NAME1": null,
+        "INTERFACE_NAME2": null,
+        "INTERFACE_NAME3": null,
+        "INTERFACE_NAME4": null,
+        "INTERFACE_NAME5": null,
+        "INTERFACE_NAME6": null
       }
-		},
-		{
-			"source": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
-			"expected": {
-				"ALL": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
-				"CLASS_NAME1": "namespace1.namespace2.classname",
-				"CLASS_NAME2": "namespace1.namespace2.classname",
-				"BASE_CLASS_NAME": "namespace.baseclass",
-				"INTERFACE_NAME1": null,
-				"INTERFACE_NAME2": null,
-				"INTERFACE_NAME3": null,
-				"INTERFACE_NAME4": null,
-				"INTERFACE_NAME5": null,
-				"INTERFACE_NAME6": null
+    },
+    {
+      "source": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
+      "expected": {
+        "ALL": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
+        "CLASS_NAME1": "namespace1.namespace2.classname",
+        "CLASS_NAME2": "namespace1.namespace2.classname",
+        "BASE_CLASS_NAME": "namespace.baseclass",
+        "INTERFACE_NAME1": null,
+        "INTERFACE_NAME2": null,
+        "INTERFACE_NAME3": null,
+        "INTERFACE_NAME4": null,
+        "INTERFACE_NAME5": null,
+        "INTERFACE_NAME6": null
       }
-		},
-		{
-			"source": "namespace.classname.registerClass('namespace.className', namespace1.namespace2.baseclass);",
-			"expected": {
-				"ALL": "namespace.classname.registerClass('namespace.className', namespace1.namespace2.baseclass);",
-				"CLASS_NAME1": "namespace.classname",
-				"CLASS_NAME2": "namespace.classname",
-				"BASE_CLASS_NAME": "namespace1.namespace2.baseclass",
-				"INTERFACE_NAME1": null,
-				"INTERFACE_NAME2": null,
-				"INTERFACE_NAME3": null,
-				"INTERFACE_NAME4": null,
-				"INTERFACE_NAME5": null,
-				"INTERFACE_NAME6": null
+    },
+    {
+      "source": "namespace.classname.registerClass('namespace.className', namespace1.namespace2.baseclass);",
+      "expected": {
+        "ALL": "namespace.classname.registerClass('namespace.className', namespace1.namespace2.baseclass);",
+        "CLASS_NAME1": "namespace.classname",
+        "CLASS_NAME2": "namespace.classname",
+        "BASE_CLASS_NAME": "namespace1.namespace2.baseclass",
+        "INTERFACE_NAME1": null,
+        "INTERFACE_NAME2": null,
+        "INTERFACE_NAME3": null,
+        "INTERFACE_NAME4": null,
+        "INTERFACE_NAME5": null,
+        "INTERFACE_NAME6": null
       }
-		}
-	]
+    }
+  ]
 }
