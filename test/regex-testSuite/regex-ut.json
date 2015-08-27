@@ -15,7 +15,7 @@
 				"INTERFACE_NAME4": null,
 				"INTERFACE_NAME5": null,
 				"INTERFACE_NAME6": null
-        	}
+      }
 		},
 		{
 			"source": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
@@ -30,7 +30,7 @@
 				"INTERFACE_NAME4": null,
 				"INTERFACE_NAME5": null,
 				"INTERFACE_NAME6": null
-        	}
+      }
 		},
 		{
 			"source": "namespace.classname.registerClass('namespace.className', namespace1.namespace2.baseclass);",
@@ -45,7 +45,7 @@
 				"INTERFACE_NAME4": null,
 				"INTERFACE_NAME5": null,
 				"INTERFACE_NAME6": null
-        	}
+      }
 		}
 	]
 }
