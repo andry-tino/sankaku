@@ -6,9 +6,10 @@
  */
 
 var testData = require('regex-ut.json');
+var testCase = require('nodeunit').testCase;
 var regex = require('../../lib/regex.js');
  
-module.exports = {
+module.exports = testCase({
   /**
     * Initializes the test.
     */
@@ -60,5 +61,5 @@ module.exports = {
   identifiers: function(test) {
   
   }
-}
+});
  
