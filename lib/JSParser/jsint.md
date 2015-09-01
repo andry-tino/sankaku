@@ -22,7 +22,7 @@ Describes an object capable of describing a node in an AST.
 
 It is an enumeration.
 
-### Interface `ASTNodeCallback`
+### Interface `ASTNodeData`
 Describes an object capable of doing actions on an AST node.
 
     interface ASTNodeData = {
