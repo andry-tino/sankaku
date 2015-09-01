@@ -35,6 +35,15 @@ Where:
 1. `type`: An enumeration describing the type of node.
 2. `node`: The node object.
 
+### Interface `ASTBrowserCallback`
+Describes a callback used for browsing a tree.
+
+    interface ASTBrowserCallback = function(nodeData: ASTNodeData) -> void
+
+**Argument `nodeData`** is a `ASTNodeData` providing info for the current node.
+
+1. `ast`: The AS
+
 ### Interface `ASTBrowser`
 Describes an object capable of browsing an AST tree.
 
