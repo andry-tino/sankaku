@@ -35,6 +35,23 @@ Where:
 1. `type`: An enumeration describing the type of node.
 2. `node`: The node object.
 
+### Interface `ASTNodeLocation`
+Describes an object providing all information regarding node location.
+
+    interface ASTNodeLocation = {
+      rowStart: number;
+      rowEnd: number;
+      colStart: number;
+      colEnd: number;
+    }
+
+Where:
+
+1. `rowStart`: Line number start.
+2. `rowEnd`: Line number end.
+3. `colStart`: Column number start.
+4. `colEnd`: Column number end.
+
 ### Interface `ASTBrowserCallback`
 Describes a callback used for browsing a tree.
 
@@ -49,8 +66,8 @@ Describes an object capable of browsing an AST tree.
 
     interface ASTBrowser <: Initializable = {
       initialize: function(ast: object) -> void;
-      browseThrough: function(callback: function(nodeData: ASTNodeData) -> void) -> void;
-      browseThroughNode: function(nodeType: ASTNodeType, callback: function(nodeData: ASTNodeData) -> void) -> void;
+      browseThrough: function(callback: ASTBrowserCallback) -> void;
+      browseThroughNode: function(nodeType: ASTNodeType, callback: ASTBrowserCallback) -> void;
     }
 
 **Member `initialize`** is a function:
@@ -61,7 +78,7 @@ Describes an object capable of browsing an AST tree.
 
 1. `callback`: The function to call to which node data will be passed.
 
-**Member `browseThrough`** is a function which iterates every node (first level) of the AST, and will execute `callback` everytime passing details of that node to it. This function will iterate only on nodes of a certain type:
+**Member `browseThroughNode`** is a function which iterates every node (first level) of the AST, and will execute `callback` everytime passing details of that node to it. This function will iterate only on nodes of a certain type:
 
 1. `callback`: The function to call to which node data will be passed.
 2. `nodeType`: The type of nodes to be iterated.
