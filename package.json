@@ -22,6 +22,9 @@
   "devDependencies": {
     "grunt": "^0.4.5"
   },
+  "scripts": {
+    "test": "node test/testRunner.js"
+  },
   "licenses": [
     {
       "type": "MIT"
