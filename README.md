@@ -1,4 +1,7 @@
 # sankaku - 3kaku - 三角
+
+[![Build Status](https://travis-ci.org/andry-tino/sankaku.svg?branch=master)](https://travis-ci.org/andry-tino/sankaku)
+
 ![sankaku](./sankaku.png "sankaku") 
 
 ScriptSharp to TypeScript via JavaScript
