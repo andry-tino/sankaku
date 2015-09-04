@@ -14,24 +14,36 @@ Describes an object that needs initialization.
 Describes an object capable of browsing a source code.
 
     interface SourceBrowser = {
-      at: function(rs: number, re: number, cs: number, ce: number) -> string;
+      at: function(loc: ASTNodeLocation) -> string;
     }
 
 **Member `at`** is a function:
 
-1. `rs`: Row start.
-2. `re`: Row end.
-3. `cs`: Column start.
-4. `ce`: Column end.
+1. `loc`: The `ASTNodeLocation` object.
 5. `return`: Returns the piece of code requested. It it spans on more lines, those lines will be collapsed into a single line without adding anymore character.
 
 ## Regex handling
 Interfaces used mostly in `regex.js`.
 
+### Interface `RegexMatches`
+Describes an object providing all necessary API for describing the matches for a specific regex expression.
+
+    interface RegexMatches = {
+      matched: boolean;
+      ALL: string;
+      ...
+    }
+
+Where:
+
+1. `matched`: A boolean indication whether the regex matched or not the expression provided as input.
+2. `ALL`: The expression being matched. Regardless of the fact that the expression matched, this member will always contain the expression.
+3. `...`: More members can be found depending on the specific `[RegexUnit]` being matched.
+
 ### Interface `RegexHandler`
 Describes an object providing all necessary API for handling a specific regex.
 
-    interface RegexHandler = function(matches: *string | null) -> object | null
+    interface RegexHandler = function(matches: *string | null) -> RegexUnit | null
 
 Where:
 
