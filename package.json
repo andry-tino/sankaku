@@ -1,7 +1,30 @@
 {
   "name": "sankaku",
+  "title": "sankaku",
   "version": "0.1.0",
+  "description": "ScriptSharp to TypeScript via JavaScript",
+  "main": "sankaku.js",
+  "author": {
+    "name": "Andrea Tino",
+    "email": "andry.tino@gmail.com",
+    "url": "https://github.com/andry-tino/sankaku"
+  }
+  "engines": {
+    "node": ">=0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andry-tino/sankaku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andry-tino/sankaku/issues"
+  },
   "devDependencies": {
     "grunt": "^0.4.5"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }
