@@ -62,3 +62,19 @@ Where:
 
 1. `regex`: Is the regex string (not the `RegExp` object).
 2. 'handler': A `[RegexHandler]` for `regex`.
+
+## TypeScript renderers
+Interfaces capable of rendering syntactic constructs from ScriptSharp to TypeScript.
+
+### Interface `TSRenderer`
+Describes an object providing all necessary API for rendering a TypeScript syntax construct.
+
+    interface TSRenderer <: Initializable = {
+      initialize: function(rm: RegexMatches) -> void;
+      render: function() -> string;
+    }
+
+Where:
+
+1. `initialize`: Requires a `[RegexMatches]` object to start the description.
+2. `render`: A function returning the TypeScript syntax for a particular syntax construct.
