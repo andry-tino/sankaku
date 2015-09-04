@@ -8,7 +8,7 @@
     "name": "Andrea Tino",
     "email": "andry.tino@gmail.com",
     "url": "https://github.com/andry-tino/sankaku"
-  }
+  },
   "engines": {
     "node": ">=0.12.7"
   },
