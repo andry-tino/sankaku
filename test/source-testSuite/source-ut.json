@@ -1,14 +1,21 @@
 {
-  "description": "Test data for source-ut.",
+  "description": "Test data for source-ut. This document refers to `test-source1.md`.",
   
   "locations": [
     {
-      "location": "2 3 5 7",
-      "expected": "bla bla"
+      "description": "",
+      "location": [7, 7, 15, 21],
+      "expected": "ligula"
     },
     {
-      "location": "2 3 5 7",
-      "expected": "bla bla"
+      "description": "",
+      "location": [9, 9, 21, 44],
+      "expected": "egestas at pulvinar vel"
+    },
+    {
+      "description": "",
+      "location": [18, 18, 1, 21],
+      "expected": "## Pesillae retinata"
     }
   ]
 }

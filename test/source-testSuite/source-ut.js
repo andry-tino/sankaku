@@ -5,11 +5,15 @@
  * Part of: source-testSuite
  */
 
+var fs = require('fs');
 var testData = require('./source-ut.json');
 var source = require('../../lib/source.js');
+var astUtils = require('../../lib/JSParser/mozillaAstUtils.js');
 
-var testResult = function(test, expected, actual, message) {
-  var errorMessage = message + '! Expected: \'' + expected + '\', got: \'' + actual + '\'!';
+var src = null; // [string]
+
+var testResult = function(test, expected, actual, location, message) {
+  var errorMessage = message + '! @[' + location + '] Expected: \'' + expected + '\', got: \'' + actual + '\'!';
   if (!actual) {
     test.ok(!expected, errorMessage);
     return;
@@ -22,6 +26,9 @@ module.exports = {
    * Initializes the test.
    */
   setUp: function(callback) {
+    // Load the file
+    src = fs.readFileSync('./test-source1.md', { encoding: 'utf8' });
+    
     if (callback) callback();
   },
   
@@ -36,7 +43,16 @@ module.exports = {
    * Retrieving parts in the code.
    */
   retrieveSourceFromLocations: function(test) {
-    // TODO 
+    var tetra2loc = astUtils.buildLocation;
+    var testSource = source(src);
+  
+    for (var k in testData.locations) {
+      var tetra = testData.locations[k].location;
+      var loc = tetra2loc(tetra);
+      var excerpt = testSource.at(loc);
+      
+      testResult(test, testData.locations[k].expected, excerpt, JSON.stringify(tetra), "Text does not match at specified location!");
+    }
   
     test.done();
   }

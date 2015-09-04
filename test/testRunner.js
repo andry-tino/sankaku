@@ -8,8 +8,10 @@
 var nodeunit = require('nodeunit');
 
 var regexTestSuite = './regex-testSuite/regex-ut.js';
+var sourceTestSuite = './regex-testSuite/source-ut.js';
 
 nodeunit.reporters.default.run([
-  regexTestSuite
+  regexTestSuite,
+  sourceTestSuite
 ]);
 
