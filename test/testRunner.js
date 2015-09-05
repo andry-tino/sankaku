@@ -6,9 +6,10 @@
  */
  
 var nodeunit = require('nodeunit');
+var path = require('path');
 
-var regexTestSuite = './regex-testSuite/regex-ut.js';
-var sourceTestSuite = './regex-testSuite/source-ut.js';
+var regexTestSuite = path.join(__dirname, 'regex-testSuite/regex-ut.js');
+var sourceTestSuite = path.join(__dirname, 'source-testSuite/source-ut.js');
 
 nodeunit.reporters.default.run([
   regexTestSuite,

@@ -87,11 +87,8 @@ module.exports = {
     test.done();
   },
 
-  /**
-   * Recognizing identifiers.
-   */
-  identifiers: function(test) {
-  
-  }
+  // TODO: Tests to add
+  // interfaces
+  // enums
 };
  
