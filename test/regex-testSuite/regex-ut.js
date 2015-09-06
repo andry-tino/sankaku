@@ -8,7 +8,7 @@
 var testData = require('./regex-ut.json');
 var regex = require('../../lib/regex.js');
 
-var testResult = function(test, expected, actual, message) {
+var testResult = function(test, actual, expected, message) {
   var errorMessage = message + '! Expected: \'' + expected + '\', got: \'' + actual + '\'!';
   if (!actual) {
     test.ok(!expected, errorMessage);
@@ -85,7 +85,7 @@ module.exports = {
   
       // Checking members
       testResult(test, handledMatches.ALL, testData.fullyQualifiedNames[k].expected.ALL, 'ALL does not match!');
-      testResult(test, handledMatches.LAST_IDENTIFIER_NAME, testData.classStatements[k].expected.LAST_IDENTIFIER_NAME, 'LAST_IDENTIFIER_NAME does not match!');
+      testResult(test, handledMatches.LAST_IDENTIFIER_NAME, testData.fullyQualifiedNames[k].expected.LAST_IDENTIFIER_NAME, 'LAST_IDENTIFIER_NAME does not match!');
     }
   
     test.done();
