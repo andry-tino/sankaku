@@ -14,5 +14,11 @@ var sourceTestSuite = path.join(__dirname, 'source-testSuite/source-ut.js');
 nodeunit.reporters.default.run([
   regexTestSuite,
   sourceTestSuite
-]);
+], 
+null, 
+function(d) {
+  if (d) {
+    throw 'Error: ' + d;
+  }
+});
 
