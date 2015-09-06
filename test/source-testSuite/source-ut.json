@@ -4,17 +4,17 @@
   "locations": [
     {
       "description": "",
-      "location": [7, 7, 15, 21],
+      "location": [7, 7, 15, 20],
       "expected": "ligula"
     },
     {
       "description": "",
-      "location": [9, 9, 21, 44],
+      "location": [9, 9, 21, 43],
       "expected": "egestas at pulvinar vel"
     },
     {
       "description": "",
-      "location": [18, 18, 1, 21],
+      "location": [18, 18, 1, 20],
       "expected": "## Pesillae retinata"
     }
   ]
