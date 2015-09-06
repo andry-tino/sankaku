@@ -3,7 +3,7 @@
   
   "classStatements": [
     {
-      "description": "",
+      "description": "Simple ID",
       "source": "classname.registerClass('classname', baseclass);",
       "expected": {
         "ALL": "classname.registerClass('classname', baseclass);",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "description": "",
+      "description": "1 namespace ID",
       "source": "namespace.classname.registerClass('namespace.classname', namespace.baseclass);",
       "expected": {
         "ALL": "namespace.classname.registerClass('namespace.classname', namespace.baseclass);",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "description": "",
+      "description": "2 namespace ID",
       "source": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
       "expected": {
         "ALL": "namespace1.namespace2.classname.registerClass('namespace1.namespace2.classname', namespace.baseclass);",
@@ -51,7 +51,7 @@
       }
     },
     {
-      "description": "",
+      "description": "Namespace base class",
       "source": "namespace.classname.registerClass('namespace.classname', namespace1.namespace2.baseclass);",
       "expected": {
         "ALL": "namespace.classname.registerClass('namespace.classname', namespace1.namespace2.baseclass);",

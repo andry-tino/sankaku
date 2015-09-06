@@ -56,7 +56,7 @@ module.exports = {
       var loc = tetra2loc(t4[0], t4[1], t4[2], t4[3]);
       var excerpt = testSource.at(loc);
       
-      testResult(test, testData.locations[k].expected, excerpt, loc, "Text does not match at specified location!");
+      testResult(test, testData.locations[k].expected, excerpt, loc, testData.locations[k].description + " - Text does not match at specified location!");
     }
   
     test.done();
