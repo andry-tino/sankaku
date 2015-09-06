@@ -36,6 +36,8 @@ module.exports = {
    * Recognizing class statements.
    */
   classStatememts: function(test) {
+    test.expect(11 * testData.classStatements.length);
+
     var regexp = regex();
      
     for (var k in testData.classStatements) {
@@ -67,6 +69,8 @@ module.exports = {
    * Recognizing fully qualified names.
    */
   fullyQualifiedNames: function(test) {
+    test.expect(4 * testData.fullyQualifiedNames.length);
+
     var regexp = regex();
      
     for (var k in testData.fullyQualifiedNames) {

@@ -68,7 +68,7 @@
     }
   ],
 
-  "fullNameQualifiers": [
+  "fullyQualifiedNames": [
     {
       "description": "",
       "source": "classname",

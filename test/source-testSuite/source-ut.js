@@ -46,6 +46,8 @@ module.exports = {
    * Retrieving parts in the code.
    */
   retrieveSourceFromLocations: function(test) {
+    test.expect(1 * testData.locations.length);
+
     var tetra2loc = astUtils().buildLocation;
     var testSource = source(src);
     
