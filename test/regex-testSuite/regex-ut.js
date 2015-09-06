@@ -69,7 +69,7 @@ module.exports = {
    * Recognizing fully qualified names.
    */
   fullyQualifiedNames: function(test) {
-    test.expect(4 * testData.fullyQualifiedNames.length);
+    test.expect(5 * testData.fullyQualifiedNames.length);
 
     var regexp = regex();
      
@@ -85,6 +85,7 @@ module.exports = {
   
       // Checking members
       testResult(test, handledMatches.ALL, testData.fullyQualifiedNames[k].expected.ALL, 'ALL does not match!');
+      testResult(test, handledMatches.FIRST_IDENTIFIER_NAME, testData.fullyQualifiedNames[k].expected.FIRST_IDENTIFIER_NAME, 'FIRST_IDENTIFIER_NAME does not match!');
       testResult(test, handledMatches.LAST_IDENTIFIER_NAME, testData.fullyQualifiedNames[k].expected.LAST_IDENTIFIER_NAME, 'LAST_IDENTIFIER_NAME does not match!');
     }
   

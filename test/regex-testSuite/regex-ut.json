@@ -74,6 +74,7 @@
       "source": "classname",
       "expected": {
         "ALL": "classname",
+        "FIRST_IDENTIFIER_NAME": "classname",
         "LAST_IDENTIFIER_NAME": "classname" 
       }
     },
@@ -82,6 +83,7 @@
       "source": "namespace.classname",
       "expected": {
         "ALL": "namespace.classname",
+        "FIRST_IDENTIFIER_NAME": "namespace",
         "LAST_IDENTIFIER_NAME": "classname"
       }
     },
@@ -90,6 +92,7 @@
       "source": "namespace1.namespace2.classname",
       "expected": {
         "ALL": "namespace1.namespace2.classname",
+        "FIRST_IDENTIFIER_NAME": "namespace1",
         "LAST_IDENTIFIER_NAME": "classname"
       }
     },
@@ -98,6 +101,7 @@
       "source": "namespace1.namespace2.namespace3.classname",
       "expected": {
         "ALL": "namespace1.namespace2.namespace3.classname",
+        "FIRST_IDENTIFIER_NAME": "namespace1",
         "LAST_IDENTIFIER_NAME": "classname"
       }
     }
