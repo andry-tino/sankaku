@@ -6,6 +6,7 @@
  */
 
 var testData = require('./regex-ut.json');
+var testUtils = require('../testUtils.js');
 var regex = require('../../lib/regex.js');
 
 var testResult = function(test, actual, expected, message) {
@@ -36,11 +37,11 @@ module.exports = {
    * Recognizing class statements.
    */
   classStatememts: function(test) {
-    test.expect(11 * testData.classStatements.length);
+    test.expect(11 * testUtils.getActiveTestNum(testData.classStatements.length));
 
     var regexp = regex();
      
-    for (var k in testData.classStatements) {
+    for (var k in testUtils.getActiveTests(testData.classStatements)) {
       var matches = regexp.match(
         regexp.REGISTER_CLASS_STMNT.regex, 
         testData.classStatements[k].source);
@@ -69,11 +70,11 @@ module.exports = {
    * Recognizing fully qualified names.
    */
   fullyQualifiedNames: function(test) {
-    test.expect(5 * testData.fullyQualifiedNames.length);
+    test.expect(5 * testUtils.getActiveTestNum(testData.fullyQualifiedNames.length));
 
     var regexp = regex();
      
-    for (var k in testData.fullyQualifiedNames) {
+    for (var k in testUtils.getActiveTests(testData.fullyQualifiedNames)) {
       var matches = regexp.match(
         regexp.FULLY_QUALIFIED_NAME.regex,
         testData.fullyQualifiedNames[k].source);

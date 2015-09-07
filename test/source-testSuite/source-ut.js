@@ -10,6 +10,7 @@ var path = require('path');
 
 var testData = require('./source-ut.json');
 var source = require('../../lib/source.js');
+var testUtils = require('../testUtils.js');
 var astUtils = require('../../lib/JSParser/mozillaAstUtils.js');
 
 var src = null; // [string]
@@ -46,12 +47,12 @@ module.exports = {
    * Retrieving parts in the code.
    */
   retrieveSourceFromLocations: function(test) {
-    test.expect(1 * testData.locations.length);
+    test.expect(1 * testUtils.getActiveTestNum(testData.locations));
 
     var tetra2loc = astUtils().buildLocation;
     var testSource = source(src);
     
-    for (var k in testData.locations) {
+    for (var k in testUtils.getActiveTests(testData.locations)) {
       var t4 = testData.locations[k].location;
       var loc = tetra2loc(t4[0], t4[1], t4[2], t4[3]);
       var excerpt = testSource.at(loc);
