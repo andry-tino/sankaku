@@ -19,6 +19,18 @@
       "enabled": true,
       "location": [18, 18, 1, 20],
       "expected": "## Pesillae retinata"
+    },
+    {
+      "description": "2 lines",
+      "enabled": false,
+      "location": [19, 20, 1, 27],
+      "expected": "Quisque vestibulum metus quis sapien aliquam, in blandit odio viverra.\nCras porta ultricies ipsum."
+    },
+    {
+      "description": "2 lines",
+      "enabled": false,
+      "location": [27, 28, 44, 34],
+      "expected": "Mauris et tempus magna.\nMorbi vehicula vehicula consequat."
     }
   ]
 }

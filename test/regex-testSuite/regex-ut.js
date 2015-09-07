@@ -40,27 +40,28 @@ module.exports = {
     test.expect(11 * testUtils.getActiveTestNum(testData.classStatements));
 
     var regexp = regex();
-     
-    for (var k in testUtils.getActiveTests(testData.classStatements)) {
+
+    var items = testUtils.getActiveTests(testData.classStatements);   
+    for (var k in items) {
       var matches = regexp.match(
         regexp.REGISTER_CLASS_STMNT.regex, 
-        testData.classStatements[k].source);
+        items[k].source);
       var handledMatches = regexp.REGISTER_CLASS_STMNT.handler(matches);
       
       // Initial checks
       test.ok(handledMatches.ALL != null, 'ALL should not be null!');
   
       // Checking members
-      testResult(test, handledMatches.ALL, testData.classStatements[k].expected.ALL, testData.classStatements[k].description + ' - ALL does not match!');
-      testResult(test, handledMatches.BASE_CLASS_NAME, testData.classStatements[k].expected.BASE_CLASS_NAME, testData.classStatements[k].description + ' - BASE_CLASS_NAME does not match!');
-      testResult(test, handledMatches.CLASS_NAME1, testData.classStatements[k].expected.CLASS_NAME1, testData.classStatements[k].description + ' - CLASS_NAME1 does not match!');
-      testResult(test, handledMatches.CLASS_NAME2, testData.classStatements[k].expected.CLASS_NAME2, testData.classStatements[k].description + ' - CLASS_NAME2 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME1, testData.classStatements[k].expected.INTERFACE_NAME1, testData.classStatements[k].description + ' - INTERFACE_NAME1 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME2, testData.classStatements[k].expected.INTERFACE_NAME2, testData.classStatements[k].description + ' - INTERFACE_NAME2 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME3, testData.classStatements[k].expected.INTERFACE_NAME3, testData.classStatements[k].description + ' - INTERFACE_NAME3 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME4, testData.classStatements[k].expected.INTERFACE_NAME4, testData.classStatements[k].description + ' - INTERFACE_NAME4 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME5, testData.classStatements[k].expected.INTERFACE_NAME5, testData.classStatements[k].description + ' - INTERFACE_NAME5 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME6, testData.classStatements[k].expected.INTERFACE_NAME6, testData.classStatements[k].description + ' - INTERFACE_NAME6 does not match!');
+      testResult(test, handledMatches.ALL, items[k].expected.ALL, items[k].description + ' - ALL does not match!');
+      testResult(test, handledMatches.BASE_CLASS_NAME, items[k].expected.BASE_CLASS_NAME, items[k].description + ' - BASE_CLASS_NAME does not match!');
+      testResult(test, handledMatches.CLASS_NAME1, items[k].expected.CLASS_NAME1, items[k].description + ' - CLASS_NAME1 does not match!');
+      testResult(test, handledMatches.CLASS_NAME2, items[k].expected.CLASS_NAME2, items[k].description + ' - CLASS_NAME2 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME1, items[k].expected.INTERFACE_NAME1, items[k].description + ' - INTERFACE_NAME1 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME2, items[k].expected.INTERFACE_NAME2, items[k].description + ' - INTERFACE_NAME2 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME3, items[k].expected.INTERFACE_NAME3, items[k].description + ' - INTERFACE_NAME3 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME4, items[k].expected.INTERFACE_NAME4, items[k].description + ' - INTERFACE_NAME4 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME5, items[k].expected.INTERFACE_NAME5, items[k].description + ' - INTERFACE_NAME5 does not match!');
+      testResult(test, handledMatches.INTERFACE_NAME6, items[k].expected.INTERFACE_NAME6, items[k].description + ' - INTERFACE_NAME6 does not match!');
     }
   
     test.done();
@@ -73,11 +74,12 @@ module.exports = {
     test.expect(5 * testUtils.getActiveTestNum(testData.fullyQualifiedNames));
 
     var regexp = regex();
-     
-    for (var k in testUtils.getActiveTests(testData.fullyQualifiedNames)) {
+    
+    var items = testUtils.getActiveTests(testData.fullyQualifiedNames);
+    for (var k in items) {
       var matches = regexp.match(
         regexp.FULLY_QUALIFIED_NAME.regex,
-        testData.fullyQualifiedNames[k].source);
+        items[k].source);
       var handledMatches = regexp.FULLY_QUALIFIED_NAME.handler(matches);
       
       // Initial checks
@@ -85,9 +87,9 @@ module.exports = {
       test.ok(handledMatches.ALL != null, 'ALL should not be null!');
   
       // Checking members
-      testResult(test, handledMatches.ALL, testData.fullyQualifiedNames[k].expected.ALL, 'ALL does not match!');
-      testResult(test, handledMatches.FIRST_IDENTIFIER_NAME, testData.fullyQualifiedNames[k].expected.FIRST_IDENTIFIER_NAME, 'FIRST_IDENTIFIER_NAME does not match!');
-      testResult(test, handledMatches.LAST_IDENTIFIER_NAME, testData.fullyQualifiedNames[k].expected.LAST_IDENTIFIER_NAME, 'LAST_IDENTIFIER_NAME does not match!');
+      testResult(test, handledMatches.ALL, items[k].expected.ALL, items[k].description + ' - ALL does not match!');
+      testResult(test, handledMatches.FIRST_IDENTIFIER_NAME, items[k].expected.FIRST_IDENTIFIER_NAME, items[k].description +  ' - FIRST_IDENTIFIER_NAME does not match!');
+      testResult(test, handledMatches.LAST_IDENTIFIER_NAME, items[k].expected.LAST_IDENTIFIER_NAME, items[k].description + ' - LAST_IDENTIFIER_NAME does not match!');
     }
   
     test.done();
