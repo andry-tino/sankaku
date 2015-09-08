@@ -4,14 +4,14 @@
  * No interface definition.
  */
 
-DN.TrailingDotsBusyStateVisualizer = function(busyState) {
-    DN.TrailingDotsBusyStateVisualizer.initializeBase(this, [busyState]);
-    this.$5 = new DN.TrailingDotsBusyIndicatorControl();
+namespace1.mycomponent = function(par) {
+    namespace1.mycomponent.initializeBase(this, [par]);
+    this.$5 = new namespace1.myOtherComponent();
     this.$5.set_isBichromatic(true);
     this.$5.render();
     this.$8();
 }
-DN.TrailingDotsBusyStateVisualizer.prototype = {
+namespace1.mycomponent.prototype = {
     $5: null,
     get_controlRunning: function() {
         if (this.$5.get_state() === 0) {
@@ -20,10 +20,10 @@ DN.TrailingDotsBusyStateVisualizer.prototype = {
         return false;
     },
     get_$6: function() {
-        return this.get_busyState().get_busyPhase() === 2 || this.get_busyState().get_busyPhase() === 3;
+        return this.get_par().get_element() === 2 || this.get_par().get_another() === 3;
     },
-    onBusyPhaseChanged: function() {
-        DN.TrailingDotsBusyStateVisualizer.callBaseMethod(this, 'onBusyPhaseChanged');
+    onElementChanged: function() {
+        namespace1.mycomponent.callBaseMethod(this, 'onEvent');
         this.$7();
     },
     startControl: function() {
@@ -43,4 +43,4 @@ DN.TrailingDotsBusyStateVisualizer.prototype = {
         document.body.appendChild(this.$5.get_element());
     }
 }
-DN.TrailingDotsBusyStateVisualizer.registerClass('DN.TrailingDotsBusyStateVisualizer', DN.BusyStateVisualizer);
+namespace1.mycomponent.registerClass('namespace1.mycomponent', namespace1.anotherComponent);
