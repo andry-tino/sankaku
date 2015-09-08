@@ -22,13 +22,13 @@
     },
     {
       "description": "2 lines",
-      "enabled": false,
+      "enabled": true,
       "location": [19, 20, 1, 27],
       "expected": "Quisque vestibulum metus quis sapien aliquam, in blandit odio viverra.\nCras porta ultricies ipsum."
     },
     {
       "description": "2 lines",
-      "enabled": false,
+      "enabled": true,
       "location": [27, 28, 44, 34],
       "expected": "Mauris et tempus magna.\nMorbi vehicula vehicula consequat."
     }
