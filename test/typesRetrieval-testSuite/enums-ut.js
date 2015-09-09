@@ -5,7 +5,7 @@
  * Part of: typeRetrieval-testSuite
  */
 
-var testData = require('./source-ut.json');
+var testData = require('./enums-ut.json');
 var classes = require('../../lib/enums.js');
 
 module.exports = {

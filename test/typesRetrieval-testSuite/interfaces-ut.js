@@ -5,7 +5,7 @@
  * Part of: typeRetrieval-testSuite
  */
 
-var testData = require('./source-ut.json');
+var testData = require('./interfaces-ut.json');
 var classes = require('../../lib/interfaces.js');
 
 module.exports = {
