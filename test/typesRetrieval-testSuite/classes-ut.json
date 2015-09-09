@@ -1,0 +1,27 @@
+{
+  "description": "Test data for classes-ut.`.",
+  
+  "classRegistrations": {
+    "description": "Single line",
+    "expected": [
+      {
+        "enabled": true,
+        "classFQN": "class1",
+        "baseClassFQN": "class2",
+        "interfaceFQN": [
+          "interface1",
+          "interface2"
+        ]
+      },
+      {
+        "enabled": true,
+        "classFQN": "class1",
+        "baseClassFQN": "class2",
+        "interfaceFQN": [
+          "interface1",
+          "interface2"
+        ]
+      }
+    ]
+  }
+}

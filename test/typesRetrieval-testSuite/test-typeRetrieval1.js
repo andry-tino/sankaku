@@ -1,15 +1,20 @@
-// Regex test
+/**
+ * Regex test file
+ * Contains:
+ * - Class registration declarations
+ * - Class components declarations
+ */
 
-// Comment
+// Comment 1
 namespace1.class1.registerClass('namespace1.class1', namespace1.class23);
 
-// Comment
+// Comment 2
 namespace1.class2.registerClass('namespace1.class2', namespace1.class45);
 
-// Comment
+// Comment 3
 namespace2.class3.registerClass('namespace2.class3', namespace1.class45);
 
-// Comment
+// Comment 4
 namespace2.class4.registerClass('namespace2.class4', namespace1.class56);
 
 /**

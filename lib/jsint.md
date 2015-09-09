@@ -22,6 +22,22 @@ Describes an object capable of browsing a source code.
 1. `loc`: The `ASTNodeLocation` object.
 5. `return`: Returns the piece of code requested. It it spans on more lines, those lines will be collapsed into a single line without adding anymore character.
 
+## Types retrieval
+Interfaces used to locate types in the AST and source. These objects will both use a `SourceBrowser` and an `ASTBrowser` to perform their tasks.
+
+### Interface `TypeRetrieval`
+Describes an object providing all necessary API for retrieving types in the source with help from AST as well.
+
+    interface TypeRetrieval <: Initializable = {
+      initialize: function(ast: SourceBrowser, src: ASTBrowser) -> void;
+      retrieveTypes: function() -> [RegexMatches*];
+    }
+
+Where:
+
+1. `initialize`: Initializes the module.
+2. `retrieveTypes`: Retrieves all types and returns a collection of `RegexMatches`.
+
 ## Regex handling
 Interfaces used mostly in `regex.js`.
 
