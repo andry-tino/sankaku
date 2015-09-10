@@ -5,7 +5,7 @@
  * Part of: sourceLoader-testSuite
  */
 
-var sourceLoader = require('../../lib/sourceLoader.json');
+var sourceLoader = require('../../lib/sourceLoader.js');
 
 module.exports = {
   /**
