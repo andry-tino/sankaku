@@ -6,7 +6,7 @@
  */
 
 var testData = require('./source-ut.json');
-var sourceLoader = require('../../lib/sourceLoader.json');
+var sourceLoader = require('../../lib/sourceLoader.js');
 var source = require('../../lib/source.js');
 var testUtils = require('../testUtils.js');
 var astUtils = require('../../lib/JSParser/mozillaAstUtils.js');
