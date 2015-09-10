@@ -29,7 +29,7 @@ module.exports = {
    */
   setUp: function(callback) {
     // Load the file
-    src = sourceLoader('test-source1.md').source;
+    src = sourceLoader('test-source1.md', __dirname).source;
     
     if (callback) callback();
   },
