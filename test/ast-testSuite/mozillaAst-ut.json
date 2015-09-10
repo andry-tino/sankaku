@@ -1,0 +1,58 @@
+{
+  "description": "Test data for mozillaAst-ut.",
+  
+  "snippets": [
+    {
+      "description": "Simple ID",
+      "enabled": true,
+      "source": "classname.registerClass('classname', baseclass);",
+      "ast": "classname.registerClass('classname', baseclass);",
+      "expected": {
+        "type": ""
+      }
+    }
+  ],
+
+  "programs": [
+    {
+      "description": "Simple ID",
+      "enabled": true,
+      "source": "source file name",
+      "ast": "ast file name",
+      "expected": {
+        "count": 0,
+        "types": {
+          "0": {
+            "count": 0
+          },
+          "1": {
+            "count": 0
+          },
+          "2": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "description": "Simple ID",
+      "enabled": true,
+      "source": "classname.registerClass('classname', baseclass);",
+      "ast": "classname.registerClass('classname', baseclass);",
+      "expected": {
+        "count": 0,
+        "types": {
+          "0": {
+            "count": 0
+          },
+          "1": {
+            "count": 0
+          },
+          "2": {
+            "count": 0
+          }
+        }
+      }
+    }
+  ]
+}
