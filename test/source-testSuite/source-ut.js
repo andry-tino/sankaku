@@ -5,10 +5,8 @@
  * Part of: source-testSuite
  */
 
-var fs = require('fs');
-var path = require('path');
-
 var testData = require('./source-ut.json');
+var sourceLoader = require('../../lib/sourceLoader.json');
 var source = require('../../lib/source.js');
 var testUtils = require('../testUtils.js');
 var astUtils = require('../../lib/JSParser/mozillaAstUtils.js');
@@ -31,7 +29,7 @@ module.exports = {
    */
   setUp: function(callback) {
     // Load the file
-    src = fs.readFileSync(path.join(__dirname, 'test-source1.md'), { encoding: 'utf8' });
+    src = sourceLoader('test-source1.md').source;
     
     if (callback) callback();
   },

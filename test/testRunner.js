@@ -14,6 +14,9 @@ var regexTestSuite = path.join(__dirname, 'regex-testSuite/regex-ut.js');
 // Source tests
 var sourceTestSuite = path.join(__dirname, 'source-testSuite/source-ut.js');
 
+// Source loader tests
+var sourceLoaderTestSuite = path.join(__dirname, 'sourceLoader-testSuite/sourceLoader-ut.js');
+
 // Types retrieval
 var typesRetrievalTestSuites = {
   classesTestSuite: path.join(__dirname, 'typesRetrieval-testSuite/classes-ut.js'),
@@ -24,7 +27,8 @@ var typesRetrievalTestSuites = {
 // Tests to execute
 nodeunit.reporters.default.run([
   regexTestSuite,
-  sourceTestSuite
+  sourceTestSuite,
+  sourceLoaderTestSuite
 ], 
 null, 
 function(d) {
