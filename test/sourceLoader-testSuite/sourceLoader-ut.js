@@ -30,8 +30,8 @@ module.exports = {
 
     var src = sourceLoader('test-source1.md');
     
-    test.ok(src.error === null, 'No error should occur in loading file!');
-    test.ok(src.source !== null, 'Source should have been loaded!');
+    test.ok(src.error === null, 'No error should occur in loading file! But we got error: ' + JSON.stringify(src.error));
+    test.ok(src.source !== null, 'Source should have been loaded! But we got error: ' + JSON.stringify(src.error));
     test.ok(typeof src === 'string', 'Loaded source should be proper string!');
     test.ok(src.length > 0, 'Loaded source should contain at least 1 character!');
   
@@ -47,7 +47,7 @@ module.exports = {
     var src = sourceLoader('invalid-file.inv');
     
     test.ok(src.error !== null, 'Error should have been swallowed when loading file!');
-    test.ok(src.source === null, 'Source should not have been loaded!');
+    test.ok(src.source === null, 'Source should not have been loaded! But we got source: ' + JSON.stringify(src.source));
   
     test.done();
   }
