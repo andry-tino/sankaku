@@ -1,6 +1,6 @@
 /**
  * Test source file for types
- * Type: 302
+ * Type: 302 - Object expression
  *
  * Important!
  * Execute this file by calling the SpiderMonkey compiler process:

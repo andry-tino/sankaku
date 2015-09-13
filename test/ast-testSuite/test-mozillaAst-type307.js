@@ -16,4 +16,4 @@
  */
 
 // A unary operator expression
-print(JSON.stringify(Reflect.parse('name++')));
+print(JSON.stringify(Reflect.parse('-name')));
