@@ -71,7 +71,7 @@ var files2parse = [
 var path2MozJs = path.join(__dirname, '../../deps/mozjs/mozjs-31.2.0-unix-rhel');
 
 var getFromMozJs = function(filepath) {
-var par = '--file=' + filepath;
+  var par = '--file=' + filepath;
   var buf = exec(path2MozJs, [par], { detached: false, encoding: 'utf8' });
   if (!buf) {
     throw 'Error invoking: ' + path2MozJs + '!';
