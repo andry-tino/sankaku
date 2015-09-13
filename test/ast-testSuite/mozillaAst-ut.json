@@ -3,12 +3,462 @@
   
   "associations": [
     {
-      "description": "Expression",
+      "description": "Empty statement",
       "enabled": true,
-      "fileName": "test-mozillaAst-typeXXX",
-      "jsonNodeAccessPath": "body.bla.bla",
+      "fileName": "test-mozillaAst-type100",
+      "jsonNodeAccessPath": "x.body[0]",
       "expected": {
-        "type": ""
+        "type": 100
+      }
+    },
+    {
+      "description": "Block statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type101",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 101
+      }
+    },
+    {
+      "description": "Expression statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type102",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 102
+      }
+    },
+    {
+      "description": "If statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type103",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 103
+      }
+    },
+    {
+      "description": "Labeled statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type104",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 104
+      }
+    },
+    {
+      "description": "Break statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type105",
+      "jsonNodeAccessPath": "x.body[0].body",
+      "expected": {
+        "type": 105
+      }
+    },
+    {
+      "description": "Continue statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type106",
+      "jsonNodeAccessPath": "x.body[0].body",
+      "expected": {
+        "type": 106
+      }
+    },
+    {
+      "description": "With statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type107",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 107
+      }
+    },
+    {
+      "description": "Switch statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type108",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 108
+      }
+    },
+    {
+      "description": "Return statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type109",
+      "jsonNodeAccessPath": "x.body[0].body.body[0]",
+      "expected": {
+        "type": 109
+      }
+    },
+    {
+      "description": "Throw statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type110",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 110
+      }
+    },
+    {
+      "description": "Try statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type111",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 111
+      }
+    },
+    {
+      "description": "While statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type112",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 112
+      }
+    },
+    {
+      "description": "Do While statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type113",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 113
+      }
+    },
+    {
+      "description": "For statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type114",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 114
+      }
+    },
+    {
+      "description": "For In statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type115",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 115
+      }
+    },
+    {
+      "description": "For Of statement",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type116",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 116
+      }
+    },
+    {
+      "description": "Let statement",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type117",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 117
+      }
+    },
+    {
+      "description": "Debugger statement",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type118",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 118
+      }
+    },
+    {
+      "description": "Function declaration",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type200",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 200
+      }
+    },
+    {
+      "description": "Variable declaration",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type201",
+      "jsonNodeAccessPath": "x.body[0]",
+      "expected": {
+        "type": 201
+      }
+    },
+    {
+      "description": "Variable declarator",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type202",
+      "jsonNodeAccessPath": "x.body[0].declarations[0]",
+      "expected": {
+        "type": 202
+      }
+    },
+    {
+      "description": "Expression this",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type300",
+      "jsonNodeAccessPath": "x.body[0].expression.object",
+      "expected": {
+        "type": 300
+      }
+    },
+    {
+      "description": "Array expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type301",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 301
+      }
+    },
+    {
+      "description": "Object expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type302",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 302
+      }
+    },
+    {
+      "description": "Property expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type303",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 303
+      }
+    },
+    {
+      "description": "Function expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type304",
+      "jsonNodeAccessPath": "x.body[0].declarations[0].init",
+      "expected": {
+        "type": 304
+      }
+    },
+    {
+      "description": "Arrow expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type305",
+      "jsonNodeAccessPath": "x.body[0].declarations[0].init",
+      "expected": {
+        "type": 305
+      }
+    },
+    {
+      "description": "Sequence expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type306",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 306
+      }
+    },
+    {
+      "description": "Unary expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type307",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 307
+      }
+    },
+    {
+      "description": "Binary expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type308",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 308
+      }
+    },
+    {
+      "description": "Assignment expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type309",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 309
+      }
+    },
+    {
+      "description": "Update expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type310",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 310
+      }
+    },
+    {
+      "description": "Logical expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type311",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 311
+      }
+    },
+    {
+      "description": "Conditional expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type312",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 312
+      }
+    },
+    {
+      "description": "New expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type313",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 313
+      }
+    },
+    {
+      "description": "Call expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type314",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 314
+      }
+    },
+    {
+      "description": "Member expression",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type315",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 315
+      }
+    },
+    {
+      "description": "Array comprehension",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type317",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 317
+      }
+    },
+    {
+      "description": "Generator expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type318",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 318
+      }
+    },
+    {
+      "description": "Graph expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type319",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 319
+      }
+    },
+    {
+      "description": "Graph index expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type320",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 320
+      }
+    },
+    {
+      "description": "Let expression",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type321",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 321
+      }
+    },
+    {
+      "description": "Pattern objects",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type400",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 400
+      }
+    },
+    {
+      "description": "Array pattern",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type401",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 401
+      }
+    },
+    {
+      "description": "Case clause",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type500",
+      "jsonNodeAccessPath": "x.body[0].cases[0]",
+      "expected": {
+        "type": 500
+      }
+    },
+    {
+      "description": "Catch clause",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type501",
+      "jsonNodeAccessPath": "x.body[0].handler",
+      "expected": {
+        "type": 501
+      }
+    },
+    {
+      "description": "Comprehension block",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type502",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 502
+      }
+    },
+    {
+      "description": "If Comprehension block",
+      "enabled": false,
+      "fileName": "test-mozillaAst-type503",
+      "jsonNodeAccessPath": "",
+      "expected": {
+        "type": 503
+      }
+    },
+    {
+      "description": "Identifier",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type600",
+      "jsonNodeAccessPath": "x.body[0].declarations[0].id",
+      "expected": {
+        "type": 600
+      }
+    },
+    {
+      "description": "Literal",
+      "enabled": true,
+      "fileName": "test-mozillaAst-type601",
+      "jsonNodeAccessPath": "x.body[0].expression",
+      "expected": {
+        "type": 601
       }
     }
   ],
