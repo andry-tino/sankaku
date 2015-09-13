@@ -16,4 +16,4 @@
  */
 
 // A sequence expression, i.e., a comma-separated sequence of expressions
-print(JSON.stringify(Reflect.parse('[1,2,3]')));
+print(JSON.stringify(Reflect.parse('var n1 = 1, n2 = 2, n3 = 3')));

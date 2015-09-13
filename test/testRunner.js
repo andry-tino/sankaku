@@ -24,11 +24,17 @@ var typesRetrievalTestSuites = {
   enumsTestSuite: path.join(__dirname, 'typesRetrieval-testSuite/enums-ut.js')
 };
 
+// AST tests
+var astTestSuites = {
+  mozillaAstTestSuite: path.join(__dirname, 'ast-testSuite/mozillaAst-ut.js')
+};
+
 // Tests to execute
 nodeunit.reporters.default.run([
   regexTestSuite,
   sourceTestSuite,
-  sourceLoaderTestSuite
+  sourceLoaderTestSuite,
+  astTestSuites.mozillaAstTestSuite
 ], 
 null, 
 function(d) {

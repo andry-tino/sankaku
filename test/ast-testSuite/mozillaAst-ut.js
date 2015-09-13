@@ -8,12 +8,13 @@
 var path = require('path');
 var fs = require('fs');
 
-var testData = require('mozillaAst-ut.json');
+var testData = require('./mozillaAst-ut.json');
 var ast = require('../../lib/JSParser/mozillaAst.js');
 var testUtils = require('../testUtils.js');
 
 var testTypeAssociation = function(test, value, actual, expected, message) {
-  var errorMessage = message + '! Expected: \'' + expected + '\', got: \'' + actual + '\' from value: \'' + value + '\'!';
+  var errorMessage = message + '! Expected: \'' + expected + '\', got: \'' + actual + 
+    '\' from value: \'' + JSON.stringify(value) + '\'!';
   test.strictEqual(actual, expected, errorMessage);
 };
 

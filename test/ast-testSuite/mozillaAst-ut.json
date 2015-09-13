@@ -256,7 +256,7 @@
     },
     {
       "description": "Sequence expression",
-      "enabled": true,
+      "enabled": false,
       "fileName": "test-mozillaAst-type306",
       "jsonNodeAccessPath": "x.body[0].expression",
       "expected": {
