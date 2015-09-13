@@ -5,7 +5,11 @@
  * Part of: ast-testSuite
  */
 
+var path = require('path');
+var fs = require('fs');
+var testData = require('mozillaAst-ut.json');
 var regex = require('../../lib/JSParser/mozillaAst.js');
+var testUtils = require('../testUtils.js');
 
 var testResult = function(test, actual, expected, message) {
   var errorMessage = message + '! Expected: \'' + expected + '\', got: \'' + actual + '\'!';
@@ -14,6 +18,10 @@ var testResult = function(test, actual, expected, message) {
     return;
   }
   test.strictEqual(actual, expected, errorMessage);
+};
+
+var readFileContent = function(filePath) {
+  // TODO
 };
 
 module.exports = {
@@ -34,34 +42,30 @@ module.exports = {
   /**
    * Recognizing class statements.
    */
-  classStatememts: function(test) {
-    test.expect(11 * testUtils.getActiveTestNum(testData.classStatements));
+  programs: function(test) {
+    test.expect(1 * testUtils.getActiveTestNum(testData.programs));
 
     var regexp = regex();
 
-    var items = testUtils.getActiveTests(testData.classStatements);   
+    var items = testUtils.getActiveTests(testData.programs);   
     for (var k in items) {
-      var matches = regexp.match(
-        regexp.REGISTER_CLASS_STMNT.regex, 
-        items[k].source);
-      var handledMatches = regexp.REGISTER_CLASS_STMNT.handler(matches);
+      var a;
       
       // Initial checks
       test.ok(handledMatches.ALL != null, 'ALL should not be null!');
   
       // Checking members
-      testResult(test, handledMatches.ALL, items[k].expected.ALL, items[k].description + ' - ALL does not match!');
-      testResult(test, handledMatches.BASE_CLASS_NAME, items[k].expected.BASE_CLASS_NAME, items[k].description + ' - BASE_CLASS_NAME does not match!');
-      testResult(test, handledMatches.CLASS_NAME1, items[k].expected.CLASS_NAME1, items[k].description + ' - CLASS_NAME1 does not match!');
-      testResult(test, handledMatches.CLASS_NAME2, items[k].expected.CLASS_NAME2, items[k].description + ' - CLASS_NAME2 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME1, items[k].expected.INTERFACE_NAME1, items[k].description + ' - INTERFACE_NAME1 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME2, items[k].expected.INTERFACE_NAME2, items[k].description + ' - INTERFACE_NAME2 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME3, items[k].expected.INTERFACE_NAME3, items[k].description + ' - INTERFACE_NAME3 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME4, items[k].expected.INTERFACE_NAME4, items[k].description + ' - INTERFACE_NAME4 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME5, items[k].expected.INTERFACE_NAME5, items[k].description + ' - INTERFACE_NAME5 does not match!');
-      testResult(test, handledMatches.INTERFACE_NAME6, items[k].expected.INTERFACE_NAME6, items[k].description + ' - INTERFACE_NAME6 does not match!');
+      testResult(test, handledMatches.ALL, items[k].expected.ALL, items[k].description + '');
     }
   
+    test.done();
+  },
+
+  /**
+   * Testing node associations to node types.
+   */
+  nodeTypeAssociations: function(test) {
+    test.expect(0);
     test.done();
   }
 };

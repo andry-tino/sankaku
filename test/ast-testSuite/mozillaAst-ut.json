@@ -1,12 +1,12 @@
 {
-  "description": "Test data for mozillaAst-ut.",
+  "description": "Test data for mozillaAst-ut. These tests need deployment. The file name specified refers to the source being used. In order to get the real file name it is necessary to add suffices.",
   
-  "snippets": [
+  "associations": [
     {
-      "description": "Simple ID",
+      "description": "Expression",
       "enabled": true,
-      "source": "classname.registerClass('classname', baseclass);",
-      "ast": "classname.registerClass('classname', baseclass);",
+      "fileName": "test-mozillaAst-typeXXX",
+      "jsonNodeAccessPath": "body.bla.bla",
       "expected": {
         "type": ""
       }
@@ -15,12 +15,13 @@
 
   "programs": [
     {
-      "description": "Simple ID",
+      "description": "Variable declarations",
       "enabled": true,
-      "source": "source file name",
-      "ast": "ast file name",
+      "fileName": "test-mozillaAst-program1",
       "expected": {
-        "count": 0,
+        "all": {
+          "count": 42
+        },
         "types": {
           "0": {
             "count": 0
@@ -37,8 +38,7 @@
     {
       "description": "Simple ID",
       "enabled": true,
-      "source": "classname.registerClass('classname', baseclass);",
-      "ast": "classname.registerClass('classname', baseclass);",
+      "fileName": "classname.registerClass('classname', baseclass);",
       "expected": {
         "count": 0,
         "types": {
