@@ -121,7 +121,7 @@ module.exports = {
       
       // Check that callback is called as many times as many nodes in the program
       nodeBrowser.browseThrough(callback);
-      testNodesCount(items[k].expected.all.count, 'none', count, ' - Nodes being browsed do not match!');
+      testNodesCount(test, 'none', count, items[k].expected.all.count, ' - Nodes being browsed do not match!');
     }
     
     test.done();
@@ -147,9 +147,9 @@ module.exports = {
         var callback = function(nodeData) {
           count++;
         };
-        
+         
         nodeBrowser.browseThroughNode(types[j], callback);
-        testNodesCount(items[k].expected.types['' + types[j]].count, types[j], count, ' - Nodes being browsed do not match!');
+        testNodesCount(test, types[j], count, items[k].expected.types['' + types[j]].count, ' - Nodes being browsed do not match!');
       }
     }
     
@@ -161,7 +161,14 @@ module.exports = {
    * callback and passes to it the correct data.
    */
   callCallbackAndPassNodeDataAsArgument: function(test) {
-    test.expect(3 * testUtils.getActiveTestNum(testData.programs));
+    var items = testUtils.getActiveTests(testData.programs);
+
+    var assertionsCount = 0;
+    for (var k in items) {
+      assertionsCount += items[k].expected.all.count;
+    }
+
+    test.expect(3 * assertionsCount);
     
     var nodeBrowser = ast();
     
@@ -183,6 +190,44 @@ module.exports = {
     
     test.done();
   },
+
+  /**
+   * Testing that data browsing correctly calls the 
+   * callback and passes to it the correct data.
+   * This test particularly focuses on the browsing capability which
+   * allows filtering by node type.
+   */
+  callCallbackAndPassNodeDataAsArgumentForNodeType: function(test) {
+    var items = testUtils.getActiveTests(testData.programs);
+
+    var assertionsCount = 0;
+    for (var k in items) {
+      assertionsCount += items[k].expected.all.count;
+    }
+    
+    test.expect(3 * assertionsCount * testUtils.getActiveTestNum(testData.programs));
+    
+    var nodeBrowser = ast();
+       
+    for (var k in items) {
+      var astString = getFromFile(path.join(__dirname, items[k].fileName + '.json'));
+      var astObj = JSON.parse(astString);
+      nodeBrowser.initialize(astObj);
+      
+      // Check every type
+      for (var j in types) {
+        var callback = function(nodeData) {
+          test.ok(nodeData, 'Node data should not be null!');
+          test.ok(nodeData.type, 'Property `type` of node data should not be null!');
+          test.ok(nodeData.node, 'Property `node` of node data should not be null!');
+        };
+         
+        nodeBrowser.browseThroughNode(types[j], callback);
+      }
+    }
+    
+    test.done();
+  }, 
 
   /**
    * Testing node associations to node types.
