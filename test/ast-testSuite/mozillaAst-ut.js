@@ -205,7 +205,7 @@ module.exports = {
       assertionsCount += items[k].expected.all.count;
     }
     
-    test.expect(3 * assertionsCount * testUtils.getActiveTestNum(testData.programs));
+    test.expect(3 * assertionsCount);
     
     var nodeBrowser = ast();
        
