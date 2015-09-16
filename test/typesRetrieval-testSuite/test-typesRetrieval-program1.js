@@ -1,8 +1,5 @@
 /**
- * Regex test file
- * Contains:
- * - Class registration declarations
- * - Class components declarations
+ * Test file for types retrieval
  */
 
 // Comment 1
@@ -29,6 +26,6 @@ namespace1.mycomponent = function(par) {
 }
 
 // This is a comment for the block.
-namespace1.class12.registerClass('namespace1.mycomponent', namespace2.class435);
-namespace1.class24.registerClass('namespace1.mycomponent', namespace2.class39487);
-namespace1.class56.registerClass('namespace1.mycomponent', namespace3.class321);
+namespace1.class12.registerClass('namespace1.class12', namespace2.class435);
+namespace1.class24.registerClass('namespace1.class24', namespace2.class39487);
+namespace1.class56.registerClass('namespace1.class56', namespace3.class321);

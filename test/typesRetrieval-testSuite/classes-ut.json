@@ -1,27 +1,48 @@
 {
   "description": "Test data for classes-ut.`.",
   
-  "classRegistrations": {
-    "description": "Class registrations",
-    "expected": [
-      {
-        "enabled": true,
-        "classFQN": "class1",
-        "baseClassFQN": "class2",
-        "interfaceFQNs": [
-          "interface1",
-          "interface2"
-        ]
-      },
-      {
-        "enabled": true,
-        "classFQN": "class1",
-        "baseClassFQN": "class2",
-        "interfaceFQNs": [
-          "interface1",
-          "interface2"
-        ]
-      }
-    ]
-  }
+  "classRegistrations": [
+    {
+      "description": "Class registrations",
+      "fileName": "test-typesRetrieval-program1",
+      "enabled": true,
+      "expected": [
+        {
+          "classFQN": "namespace1.class1",
+          "baseClassFQN": "namespace1.class23",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace1.class2",
+          "baseClassFQN": "namespace1.class45",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace2.class3",
+          "baseClassFQN": "namespace1.class45",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace2.class4",
+          "baseClassFQN": "namespace1.class56",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace1.class12",
+          "baseClassFQN": "namespace2.class435",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace1.class24",
+          "baseClassFQN": "namespace2.class39487",
+          "interfaceFQNs": []
+        },
+        {
+          "classFQN": "namespace1.class56",
+          "baseClassFQN": "namespace3.class321",
+          "interfaceFQNs": []
+        }
+      ]
+    }
+  ]
 }
