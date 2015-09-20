@@ -22,9 +22,15 @@ The conversion process consists of a few steps:
 5. Rendering.
 
 ## Compatibility
-Project _sankaku_ includes everithing it needs. The only single external dependency is on _Node_ whose minimal supported version is: 0.12.7.
+Project _sankaku_ includes everything it needs. Not included dependencies are listed below:
+
+- _Node_: Minimal supported version is: 0.12.7
 
 Project _sankaku_ is available on the following platforms:
 
 - Unix/Linux (tested on RHEL)
 
+### ScriptSharp version
+This project supports conversion to TypeScript only for the following version of ScriptSharp:
+
+- _ScriptSharp_ 0.6

@@ -10,9 +10,15 @@ var fs = require('fs');
 
 var testData = require('./classes-ut.json');
 var classes = require('../../lib/classes.js');
+var src = require('../../lib/source.js');
+var ast = require('../../lib/JSParser/mozillaAst.js');
 
 var getFromFile = function(filepath) {
   return fs.readFileSync(filepath, 'utf8');
+};
+
+var getASTFromFile = function(filepath) {
+  return JSON.parse(fs.readFileSync(filepath, 'utf8'));
 };
 
 // Runs 1 assertion
@@ -72,14 +78,36 @@ module.exports = {
     
     test.expect(assertionsNum);
     
-    for (var k in items) {
-      for (var j in items[k].expected) {
+    for (var k in items) { // Cycling every file
+      var astFromFile = ast();
+      astFromFile.initialize(getASTFromFile(path.join(__dirname, items[k].fileName + '.json')));
+      var registeredClasses = classes(
+        astFromFile, 
+        src(getFromFile(path.join(__dirname, items[k].fileName + '.js')))
+      );
+      
+      var retrievedMatches = registeredClasses.retrieveTypes();
+      
+      var findInRetrievedMatches = function(className) {
+        for (var i in retrievedMatches) {
+          if (retrievedMatches[i].CLASS_NAME1 === className) {
+            return retrievedMatches[i];
+          }
+          return null;
+        }
+      };
+    
+      // Test that we find the correct number of classes
+      test.strictEqual(retrievedMatches.length, items[k].expected.length, 'The number of expected registered classes does not match with the expected onew!');
+    
+      for (var j in items[k].expected) { // Cycling every expected recognized class
         var className = items[k].classFQN;
         var baseClassName = items[k].baseClassFQN;
         var interfaces = items[k].interfaceFQNs;
         
-        testName(test, 'actual', className, 'Class name does not match!');
-        testName(test, 'actual', baseClassName, 'Base class name does not match!');
+        var foundInRetrievedTypes = findInRetrievedMatches();
+        test.ok(foundInRetrievedTypes, 'Could not find matched type!');
+        testName(test, foundInRetrievedTypes.BASE_CLASS_NAME, baseClassName, 'Base class name does not match!');
         
         test.strictEqual(interfaces.length, [].length, 'Expected: ' + 'expected' + ' interfaces, got: ' + 'actual' + '!');
         testNames(test, interfaces, [], 'Interfaces do not match!');

@@ -1,5 +1,5 @@
 {
-  "description": "Test data for classes-ut.`.",
+  "description": "Test data for `classes-ut`.",
   
   "classRegistrations": [
     {
@@ -8,38 +8,13 @@
       "enabled": true,
       "expected": [
         {
-          "classFQN": "namespace1.class1",
-          "baseClassFQN": "namespace1.class23",
+          "classFQN": "SN.SampleBaseClass",
+          "baseClassFQN": null,
           "interfaceFQNs": []
         },
         {
-          "classFQN": "namespace1.class2",
-          "baseClassFQN": "namespace1.class45",
-          "interfaceFQNs": []
-        },
-        {
-          "classFQN": "namespace2.class3",
-          "baseClassFQN": "namespace1.class45",
-          "interfaceFQNs": []
-        },
-        {
-          "classFQN": "namespace2.class4",
-          "baseClassFQN": "namespace1.class56",
-          "interfaceFQNs": []
-        },
-        {
-          "classFQN": "namespace1.class12",
-          "baseClassFQN": "namespace2.class435",
-          "interfaceFQNs": []
-        },
-        {
-          "classFQN": "namespace1.class24",
-          "baseClassFQN": "namespace2.class39487",
-          "interfaceFQNs": []
-        },
-        {
-          "classFQN": "namespace1.class56",
-          "baseClassFQN": "namespace3.class321",
+          "classFQN": "SN.SampleClass",
+          "baseClassFQN": "SN.SampleBaseClass",
           "interfaceFQNs": []
         }
       ]
