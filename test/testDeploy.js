@@ -26,7 +26,7 @@ var deploy = [
   },
   { 
     description: 'Types Retrieval test suite', 
-    path: path.join(__dirname, 'ast-testSuite/typesRetrieval-testSuite-deploy.js') 
+    path: path.join(__dirname, 'typesRetrieval-testSuite/typesRetrieval-testSuite-deploy.js') 
   },
   { 
     description: 'AST test suite', 

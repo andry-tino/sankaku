@@ -11,7 +11,7 @@ var fs = require('fs');
 var exec = require('child_process').execFileSync;
 
 var files2parse = [
-  'test-typesRetrieval-program1.js'
+  'test-typesRetrieval-program1'
 ];
 
 var path2MozJs = path.join(__dirname, '../../deps/mozjs/mozjs-31.2.0-unix-rhel');
