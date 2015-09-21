@@ -7,7 +7,7 @@
 
 var testData = require('./file-ut.json');
 var testUtils = require('../testUtils.js');
-var jsConverter = require('../../lib/fileManager/jsConverter.js');
+var jsConverter = require('../../lib/FileManager/jsConverter.js');
 
 module.exports = {
   /**
