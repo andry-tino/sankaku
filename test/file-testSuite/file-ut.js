@@ -63,11 +63,14 @@ module.exports = {
    * Non string input causes empty string to be returned.
    */
   nonStringInput: function(test) {
-    test.expect(1);
+    test.expect(4);
 
     var getParseableJs = jsConverter().js2parseableJs;
 
-    test.strictEqual(getParseableJs(0), '', 'Non string input should return empty string!');
+    test.strictEqual(getParseableJs(0), '', 'Non string (numeric) input should return empty string!');
+    test.strictEqual(getParseableJs(true), '', 'Non string (boolean) input should return empty string!');
+    test.strictEqual(getParseableJs({}), '', 'Non string (object) input should return empty string!');
+    test.strictEqual(getParseableJs(function(){}), '', 'Non string (function) input should return empty string!');
     
     test.done();
   }
