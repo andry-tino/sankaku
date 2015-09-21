@@ -1,0 +1,12 @@
+{
+  "description": "Test data for file-ut",
+  
+  "jsStrings": [
+    {
+      "description": "Simple javascript code",
+      "enabled": true,
+      "js": "var myvar = 0;",
+      "expected": { }
+    }
+  ]
+}

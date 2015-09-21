@@ -30,5 +30,18 @@ module.exports = {
   */
   getActiveTests: function(data) {
     return _getActiveTests(data);
+  },
+  
+  /**
+   * Gets a parseable version of the js source file in input.
+   * source: [string]
+   * return: [string]
+   */
+  js2parseableJs: function(source) {
+    if (!source || typeof source !== 'string') {
+      return '';
+    }
+    
+    
   }
 };

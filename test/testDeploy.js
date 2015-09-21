@@ -25,6 +25,10 @@ var deploy = [
     path: null 
   },
   { 
+    description: 'File test suite', 
+    path: null 
+  },
+  { 
     description: 'Types Retrieval test suite', 
     path: path.join(__dirname, 'typesRetrieval-testSuite/typesRetrieval-testSuite-deploy.js') 
   },
