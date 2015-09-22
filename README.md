@@ -7,6 +7,8 @@
 ScriptSharp to TypeScript via JavaScript
 
 ## The project
+**Status:** On hold.
+
 The name comes from Japanese and means _triangle_. This project has as objective converting [ScriptSharp](https://github.com/nikhilk/scriptsharp) code into [TypeScript](http://www.typescriptlang.org/) in order to allow a fast migration of big codebases.
 
 ### Important!
