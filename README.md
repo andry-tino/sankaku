@@ -7,7 +7,7 @@
 ScriptSharp to TypeScript via JavaScript
 
 ## Overview
-**Status:** On hold.
+**Status:** On hold (same effort started on project [Rosetta](https://github.com/andry-tino/Rosetta))
 
 The name comes from Japanese and means _triangle_. This project has as objective converting [ScriptSharp](https://github.com/nikhilk/scriptsharp) code into [TypeScript](http://www.typescriptlang.org/) in order to allow a fast migration of big codebases.
 
